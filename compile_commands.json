@@ -1,0 +1,134 @@
+[
+  {
+    "arguments": [
+      "/usr/bin/clang++",
+      "-c",
+      "--std=c++20",
+      "-Wall",
+      "-O0",
+      "-g",
+      "-pedantic",
+      "-framework",
+      "OpenGL",
+      "-Iinclude",
+      "-Iusr/local/include",
+      "-Iusr/local/Cellar",
+      "-o",
+      "build/debug/gaming",
+      "src/Engine.cpp"
+    ],
+    "directory": "/Users/vikrant/Desktop/opengltest",
+    "file": "/Users/vikrant/Desktop/opengltest/src/Engine.cpp",
+    "output": "/Users/vikrant/Desktop/opengltest/build/debug/gaming"
+  },
+  {
+    "arguments": [
+      "/usr/bin/clang++",
+      "-c",
+      "--std=c++20",
+      "-Wall",
+      "-O0",
+      "-g",
+      "-pedantic",
+      "-framework",
+      "OpenGL",
+      "-Iinclude",
+      "-Iusr/local/include",
+      "-Iusr/local/Cellar",
+      "-o",
+      "build/debug/gaming",
+      "src/VAO.cpp"
+    ],
+    "directory": "/Users/vikrant/Desktop/opengltest",
+    "file": "/Users/vikrant/Desktop/opengltest/src/VAO.cpp",
+    "output": "/Users/vikrant/Desktop/opengltest/build/debug/gaming"
+  },
+  {
+    "arguments": [
+      "/usr/bin/clang++",
+      "-c",
+      "--std=c++20",
+      "-Wall",
+      "-O0",
+      "-g",
+      "-pedantic",
+      "-framework",
+      "OpenGL",
+      "-Iinclude",
+      "-Iusr/local/include",
+      "-Iusr/local/Cellar",
+      "-o",
+      "build/debug/gaming",
+      "src/VBO.cpp"
+    ],
+    "directory": "/Users/vikrant/Desktop/opengltest",
+    "file": "/Users/vikrant/Desktop/opengltest/src/VBO.cpp",
+    "output": "/Users/vikrant/Desktop/opengltest/build/debug/gaming"
+  },
+  {
+    "arguments": [
+      "/usr/bin/clang++",
+      "-c",
+      "--std=c++20",
+      "-Wall",
+      "-O0",
+      "-g",
+      "-pedantic",
+      "-framework",
+      "OpenGL",
+      "-Iinclude",
+      "-Iusr/local/include",
+      "-Iusr/local/Cellar",
+      "-o",
+      "build/debug/gaming",
+      "src/main.cpp"
+    ],
+    "directory": "/Users/vikrant/Desktop/opengltest",
+    "file": "/Users/vikrant/Desktop/opengltest/src/main.cpp",
+    "output": "/Users/vikrant/Desktop/opengltest/build/debug/gaming"
+  },
+  {
+    "arguments": [
+      "/usr/bin/clang++",
+      "-c",
+      "--std=c++20",
+      "-Wall",
+      "-O0",
+      "-g",
+      "-pedantic",
+      "-framework",
+      "OpenGL",
+      "-Iinclude",
+      "-Iusr/local/include",
+      "-Iusr/local/Cellar",
+      "-o",
+      "build/debug/gaming",
+      "src/shader.cpp"
+    ],
+    "directory": "/Users/vikrant/Desktop/opengltest",
+    "file": "/Users/vikrant/Desktop/opengltest/src/shader.cpp",
+    "output": "/Users/vikrant/Desktop/opengltest/build/debug/gaming"
+  },
+  {
+    "arguments": [
+      "/usr/bin/clang++",
+      "-c",
+      "--std=c++20",
+      "-Wall",
+      "-O0",
+      "-g",
+      "-pedantic",
+      "-framework",
+      "OpenGL",
+      "-Iinclude",
+      "-Iusr/local/include",
+      "-Iusr/local/Cellar",
+      "-o",
+      "build/debug/gaming",
+      "include/glad/glad.c"
+    ],
+    "directory": "/Users/vikrant/Desktop/opengltest",
+    "file": "/Users/vikrant/Desktop/opengltest/include/glad/glad.c",
+    "output": "/Users/vikrant/Desktop/opengltest/build/debug/gaming"
+  }
+]
