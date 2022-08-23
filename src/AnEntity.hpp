@@ -11,15 +11,17 @@ public :
 
     void Awake() override {
 		this->awake(); 
-        std::cout << s << std::endl;
     }
 
     void Update() override {
 		this->update();
     };
 
+	void Draw() override {
+		this->draw(); 
+	}
+
     void Start() override {
 		this->start(); 
-        std::cout << s << std::endl;
     }
 };

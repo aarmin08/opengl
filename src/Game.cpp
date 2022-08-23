@@ -12,7 +12,7 @@ Camera* Game::camera;
 SDL_Event Game::event;
 
 void Game::Start() {
-	camera = renderer->getCamera(); 
+	camera = renderer->getCamera();
     renderer->RendererStart(r, g, b);
     running = true;
 }
@@ -22,6 +22,7 @@ void Game::Update() {
         if (event.type == SDL_QUIT) {
             running = false;
         }
+
 		
 		if (event.type == SDL_KEYDOWN) {
 			switch (event.key.keysym.sym) {
@@ -32,7 +33,8 @@ void Game::Update() {
         for (auto &entity: world->entities) {
             entity->Update();
         }
-        /* std::cout << glGetError() << std::endl; */
+        /*  << glGetError() << std::endl; */
+        std::cout << glGetError() << std::endl;
         Render();
     }
 }

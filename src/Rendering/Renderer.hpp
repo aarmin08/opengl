@@ -9,7 +9,6 @@
 #include <GL/glew.h>
 #include <iostream>
 #include <memory>
-#include "../Box.hpp"
 
 #include "../Camera.hpp"
 class Renderer {
@@ -60,10 +59,12 @@ public :
         glClear(GL_DEPTH_BUFFER_BIT | GL_COLOR_BUFFER_BIT);
         glClearColor(r, g, b, 1.0f);
 
-
+		std::cout << "Wa" << std::endl; 
         for (auto &entity: world->entities) {
+            std::cout << world->entities.size() << std::endl;
             entity->Draw();
         }
+		std::cout << "GAy" << std::endl; 
         window->SwapBuffers();
     }
 

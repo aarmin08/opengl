@@ -11,6 +11,7 @@
 unsigned int Shader::shaderProg;
 
 void Shader::CreateProgramAndBindShaders() const {
+	std::cout << "Log at create \n"; 
     unsigned int vertexShader = glCreateShader(GL_VERTEX_SHADER);
     glShaderSource(vertexShader, 1, &vertexSource, NULL);
     glCompileShader(vertexShader);
@@ -56,8 +57,12 @@ void Shader::Unbind() const {
 }
 
 void Shader::UploadUniformMat4(const std::string& name, const glm::mat4 &mat) {
-	GLint location =glGetUniformLocation(shaderProg, name.c_str());  
+	std::cout << "ga" << std::endl;
+	std::cout << name << "," << shaderProg << std::endl; 
+	GLint location = glGetUniformLocation(shaderProg, name.c_str()); 
+	std::cout << mat.length()  << std::endl;
 	glUniformMatrix4fv(location, 1, GL_FALSE, glm::value_ptr(mat));
+	std::cout << "waaa" << std::endl;
 
 	std::cout << location << std::endl; 
 }

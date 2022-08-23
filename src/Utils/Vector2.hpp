@@ -9,7 +9,6 @@ public :
 		this->x = x; 
 		this->y = y; 
 	};
-
 	//Util functions
 	static Vector2& add(Vector2 a, Vector2 b); 
 	static Vector2& subtract(Vector2 a, Vector2 b);

@@ -17,9 +17,11 @@ int main(int args, char **argc) {
 	Camera* camera{ new Camera(-1.0,1.0,-1.0, 1.0)};	
     Renderer renderer{Renderer(&window, camera)};
     World *world{new World()};
-	world->Spawn<AnEntity>(10).addComponentToEntity<Box>();    
+	std::cout << "Created aaddcdecomponetn" << std::endl; 
 	Utils::Log("Gaming", Utils::LogInfo::TEST_LOG);
 	Game game{Game(&window, &renderer, world, 0.1, 0.1, 0.1)};
+
+    world->Spawn<AnEntity>(10).addComponentToEntity<Box>(); 
 
     game.Start();
     while (game.isRunning()) {

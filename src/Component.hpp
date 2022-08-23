@@ -13,4 +13,6 @@ public :
 	virtual void Update() {}; 
 	virtual void Clean() {};
 
+	virtual void Draw() {};
+
 }; 

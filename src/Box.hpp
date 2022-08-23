@@ -12,26 +12,23 @@
 #include <vector>
 
 #include "Game.hpp"
-class Box : Component {
+class Box : public Component {
 	private : 
 		float x, y;
 		std::unique_ptr<Shader> shader;
 		std::unique_ptr<VAO> m_VertexArray; 
 		std::unique_ptr<VertexBuffer> m_VertexBuffer;
-		
 		std::unique_ptr<Camera> camera;
-
 		const char* frag = Utils::fragmentSource;
 		const char* vertex = Utils::vertexSrc; 
 	public :
 		Box() {
-		}
+					}
 		
 		// to be run in render start
 		void Start() override {
-			shader.reset(new Shader(frag, vertex)); 
+			shader.reset(new Shader(frag, vertex));
 			camera.reset(Game::camera); 
-
 			float verticees[] = {
 			 // first triangle
 				 0.5f,  0.5f, 0.0f,  // top right
@@ -51,9 +48,10 @@ class Box : Component {
 			m_VertexBuffer->Unbind();
 		}; 	
 		// To be run in the update function 
-		void Update() override {
-			shader->Bind();
+		void Draw() override {
+			shader->Bind(); 
 			m_VertexArray->Bind();
+			std::cout << Game::camera->GetProjMatrix().length() << std::endl; 
 			shader->UploadUniformMat4("u_viewProjection", Game::camera->GetProjViewMatrix());
 			glDrawArrays(GL_TRIANGLES, 0, 6);
 		}; 

@@ -55,20 +55,21 @@ public :
 	void update() { for (auto& c: components) { c->Update(); }; }
 	void start() { for (auto&c : components ) { c->Start(); }; }
 	void awake() { for (auto&c : components) { c->Awake(); }; }
+	void draw() { for (auto&c : components ) { c->Draw(); }; }
     // If you have parameters, you can set the class's template value and configure a variable using that here. Supports full config-classes.
     /* virtual void Configure(T config) {}; */
 
 	template<typename T, typename... args> T& addComponentToEntity(args... A) {
     	auto component = std::make_unique<T>(std::forward<args>(A)...);
 
-    	components.push_back(std::move(component));
-		arr[getComponentID<T>()] = this;
+    	components.emplace_back(std::move(component));
+		arr[getComponentID<T>()] = components.back().get();
 		bitSet[getComponentID<T>()] = true; 
 
-		components.back().get()->entity = this;
-    	components.back().get()->Awake();
-    	components.back().get()->Start();
-    	return *static_cast<T*>(components.back().get());
+		 components.back().get()->entity = this;
+    	 components.back().get()->Awake();
+    	 components.back().get()->Start();
+    	return  *static_cast<T *>(components.back().get());;
     }
 	
 	template<typename T> T& getComponent() {
